@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Adibatunnailah Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     body {
@@ -11,22 +12,30 @@
       text-align: center;
     }
 
+    /* HEADER */
     header {
-      background: #2c3e50;
+      background: linear-gradient(135deg, #2c3e50, #3498db);
       color: white;
-      padding: 30px 20px;
+      padding: 40px 20px;
     }
 
-    h1 {
+    header h1 {
       margin: 0;
+      font-size: 30px;
     }
 
+    header p {
+      margin-top: 10px;
+    }
+
+    /* CONTAINER */
     .container {
       padding: 20px;
       max-width: 900px;
       margin: auto;
     }
 
+    /* CARD */
     .card {
       background: white;
       padding: 20px;
@@ -34,6 +43,12 @@
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       text-align: left;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     }
 
     .card img {
@@ -42,6 +57,7 @@
       margin-top: 10px;
     }
 
+    /* BUTTON */
     .btn {
       display: inline-block;
       margin-top: 10px;
@@ -50,17 +66,31 @@
       color: white;
       text-decoration: none;
       border-radius: 8px;
+      transition: 0.3s;
     }
 
     .btn:hover {
       background: #2980b9;
     }
 
+    /* CONTACT ICON STYLE */
+    .contact {
+      text-align: center;
+    }
+
+    /* FOOTER */
     footer {
       background: #2c3e50;
       color: white;
       padding: 15px;
       margin-top: 30px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+      .container {
+        padding: 10px;
+      }
     }
   </style>
 </head>
@@ -74,9 +104,15 @@
 
 <div class="container">
 
+  <!-- ABOUT -->
+  <div class="card">
+    <h2>👩‍💻 About Me</h2>
+    <p>I am passionate about data analysis, dashboards, and turning raw data into insights for better decision making.</p>
+  </div>
+
+  <!-- PROJECTS -->
   <h2>📊 My Projects</h2>
 
-  <!-- PROJECT CARD -->
   <div class="card">
     <h3>Project 1 - Sales Dashboard (Excel)</h3>
     <p>Interactive dashboard for sales performance analysis by region and outlet.</p>
@@ -88,23 +124,23 @@
     <img src="BIKERS SALES DASHBOARD.png">
   </div>
 
-  <!-- ADD ANOTHER PROJECT (optional) -->
   <div class="card">
     <h3>More Projects Coming Soon 🚀</h3>
     <p>I will be adding Power BI and Python projects soon.</p>
   </div>
 
-  <h2>📬 Contact</h2>
-
-  <div class="card">
+  <!-- CONTACT -->
+  <div class="card contact">
+    <h2>📬 Contact</h2>
     <p>📞 014-7428898</p>
     <p>📧 dibarazak2@email.com</p>
+    <p>💻 github.com/adibatunnailah</p>
   </div>
 
 </div>
 
 <footer>
-  <p>© 2026 Adiba Portfolio</p>
+  © 2026 Adiba Portfolio
 </footer>
 
 </body>
